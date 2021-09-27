@@ -1,7 +1,7 @@
 class CategorySerializer < ActiveModel::Serializer
   attributes :id, :name
   has_many :quizzes
-  
+  # this needs to be changed
   def quizzes
     quizzes = []
     object.quizzes.map do |quiz|
