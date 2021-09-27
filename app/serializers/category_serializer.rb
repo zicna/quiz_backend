@@ -13,21 +13,27 @@ class CategorySerializer < ActiveModel::Serializer
   end
   
   def questions
-    object.quizzes.map do |quiz|
+    questions = []
+    object.quizzes.each do |quiz|
       quiz.questions.map do |question|
+        questions << 
         {
           id: question.id,
           content: question.content,
           quiz_id: question.quiz_id
         }
+
       end
     end
+    questions
   end
 
   def options
-    object.quizzes.map do |quiz|
-      quiz.questions.map do |question|
+    options =[]
+    object.quizzes.each do |quiz|
+      quiz.questions.each do |question|
         question.options.map do |option|
+          options << 
           {
             id: option.id,
             content: option.content,
@@ -37,5 +43,6 @@ class CategorySerializer < ActiveModel::Serializer
         end
       end
     end
+    options
   end
 end
