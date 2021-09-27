@@ -93,7 +93,7 @@ end
 puts "#{i} questions have been made!"
 
 options = [
-    # question 1
+    # question 1 "Return value of 'puts !true' in Ruby?"
     {
         question_id: 1,
         content: "nil",
@@ -111,7 +111,7 @@ options = [
         question_id: 1,
         content: "This will return an error."
     },
-    # question 2
+    # question 2 "Return value of method '.each' called on array. [1,2,3,4].each do |element| element * 2 end"
     {
         question_id: 2,
         content: "[1,2,3,4]",
@@ -129,7 +129,7 @@ options = [
         question_id: 2,
         content: "[1,4,9,16]"
     },
-    # question 3
+    # question 3 "Return value of method '.map' called on array. [1,2,3,4].map do |element| element * 2 end"
     {
         question_id: 3,
         content: "[1,2,3,4]"
@@ -147,7 +147,7 @@ options = [
         question_id: 3,
         content: "[1,4,9,16]"
     },
-    # question 4
+    # question 4 "What are 'falsy' values in Ruby?"
     {
         question_id: 4,
         is_correct: true,
@@ -165,7 +165,7 @@ options = [
         question_id: 4,
         content: "'0', 'nil' and 'false'"
     },
-    # question 5
+    # question 5 "console.log(1 + '1')"
     {
         question_id: 5,
         is_correct: true,
@@ -183,7 +183,7 @@ options = [
         question_id: 5,
         content: "0"
     },
-    # question 6
+    # question 6 "What will console.log(!!undefined) log to console?"
     {
         question_id: 6,
         content: "false",
@@ -201,7 +201,7 @@ options = [
         question_id: 6,
         content: "!!undefined"
     },
-    # question 7
+    # question 7 "What will 'console.log('1' == 1)' log to the console"
     {
         question_id: 7,
         content: "true",
@@ -219,6 +219,43 @@ options = [
         question_id: 7,
         content: "1 (as number)"
     }
+    # # question 8
+    # {
+    #     question_id: 8,
+    #     content:"",
+    #     is_correct: true
+    # },
+    # {
+    #     question_id: 8,
+    #     content: ""
+    # },
+    # {
+    #     question_id: 8,
+    #     content: ""
+    # },
+    # {
+    #     question_id: 8,
+    #     content: ""
+    # },
+    # # question 9
+    # {
+    #     question_id: 9,
+    #     content: "",
+    #     is_correct: true
+    # },
+    # {
+    #     question_id: 9,
+    #     content:""
+    # },
+    # {
+    #     question_id: 9,
+    #     content:""
+    # },
+    # {
+    #     question_id: 9,
+    #     content:""
+    # }
+
 ]
 opt_num = 0
 options.map do |option|
@@ -229,7 +266,7 @@ options.map do |option|
         opt_num += 1
     end
 end
-puts "#{opt_num} options has been created"
+puts "#{opt_num} options have been created"
 
 
 
