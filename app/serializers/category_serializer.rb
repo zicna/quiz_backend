@@ -37,7 +37,12 @@ class CategorySerializer < ActiveModel::Serializer
       quiz[:questions].each do |question|
         all_options.map do |option|
           if option[:question_id] == question[:id]
-            question[:options] << option
+            question[:options] << {
+              id: option[:id],
+              is_correct: option[:is_correct],
+              content: option[:content],
+              question_id: option[:question_id]
+            }
           end
         end
       end
