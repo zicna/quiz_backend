@@ -13,7 +13,8 @@ users = [
     },
     {
         username: "ruby_beginner",
-        email: "ruby_master@example.com",
+        email: "ruby_beginner@example.com",
+        admin: false
     },
     {
         username: "jsMaster",
@@ -22,7 +23,8 @@ users = [
     },
     {
         username: "jsBeginner",
-        email: "jsBeginner@example.com"
+        email: "jsBeginner@example.com",
+        admin: false
     }
 ]
 
@@ -30,6 +32,7 @@ users = [
         User.find_or_create_by(email: user[:email]) do |u|
             u.email = user[:email]
             u.username = user[:username]
+            u.admin = user[:admin]
             puts "User: #{u[:username]}, has been created!"
         end
     end
@@ -130,15 +133,18 @@ options = [
     },
     {
         question_id: 1,
-        content: "false"
+        content: "false",
+        is_correct: false
     },
     {
         question_id: 1,
-        content: "true"
+        content: "true",
+        is_correct: false
     },
     {
         question_id: 1,
-        content: "This will return an error."
+        content: "This will return an error.",
+        is_correct: false
     },
     # question 2 "Return value of method '.each' called on array. [1,2,3,4].each do |element| element * 2 end"
     {
@@ -148,20 +154,24 @@ options = [
     },
     {
         question_id: 2,
-        content: "[2,4,6,8]"
+        content: "[2,4,6,8]",
+        is_correct: false
     },
     {
         question_id: 2,
-        content: "[nil,nil,nil,nil]"
+        content: "[nil,nil,nil,nil]",
+        is_correct: false
     },
     {
         question_id: 2,
-        content: "[1,4,9,16]"
+        content: "[1,4,9,16]",
+        is_correct: false
     },
     # question 3 "Return value of method '.map' called on array. [1,2,3,4].map do |element| element * 2 end"
     {
         question_id: 3,
-        content: "[1,2,3,4]"
+        content: "[1,2,3,4]",
+        is_correct: false
     },
     {
         question_id: 3,
@@ -170,11 +180,13 @@ options = [
     },
     {
         question_id: 3,
-        content: "[nil,nil,nil,nil]"
+        content: "[nil,nil,nil,nil]",
+        is_correct: false
     },
     {
         question_id: 3,
-        content: "[1,4,9,16]"
+        content: "[1,4,9,16]",
+        is_correct: false
     },
     # question 4 "What are 'falsy' values in Ruby?"
     {
@@ -184,15 +196,18 @@ options = [
     },
     {
         question_id: 4,
-        content: "'false', 'nil' and ''(empty string)"
+        content: "'false', 'nil' and ''(empty string)",
+        is_correct: false
     },
     {
         question_id: 4,
-        content: "'false', '{}'(empty hash) and ''(empty string)"
+        content: "'false', '{}'(empty hash) and ''(empty string)",
+        is_correct: false
     },
     {
         question_id: 4,
-        content: "'0', 'nil' and 'false'"
+        content: "'0', 'nil' and 'false'",
+        is_correct: false
     },
     # question 5 "console.log(1 + '1')"
     {
@@ -202,15 +217,18 @@ options = [
     },
     {
         question_id: 5,
-        content: "2"
+        content: "2",
+        is_correct: false
     },
     {
         question_id: 5,
-        content: "This will retun an error."
+        content: "This will retun an error.",
+        is_correct: false
     },
     {
         question_id: 5,
-        content: "0"
+        content: "0",
+        is_correct: false
     },
     # question 6 "What will console.log(!!undefined) log to console?"
     {
@@ -220,15 +238,18 @@ options = [
     },
     {
         question_id: 6,
-        content: "true"
+        content: "true",
+        is_correct: false
     },
     {
         question_id: 6,
-        content: "undefined"
+        content: "undefined",
+        is_correct: false
     },
     {
         question_id: 6,
-        content: "!!undefined"
+        content: "!!undefined",
+        is_correct: false
     },
     # question 7 "What will 'console.log('1' == 1)' log to the console"
     {
@@ -238,15 +259,18 @@ options = [
     },
     {
         question_id: 7,
-        content: "false"
+        content: "false",
+        is_correct: false
     },
     {
         question_id: 7,
-        content: "1 (as string)"
+        content: "1 (as string)",
+        is_correct: false
     },
     {
         question_id: 7,
-        content: "1 (as number)"
+        content: "1 (as number)",
+        is_correct: false
     }
     # # question 8
     # {

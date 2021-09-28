@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_174243) do
   end
 
   create_table "options", force: :cascade do |t|
-    t.boolean "is_correct"
+    t.boolean "is_correct", default: false
     t.string "content"
     t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
