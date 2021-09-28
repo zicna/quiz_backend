@@ -5,6 +5,35 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+users = [
+    {
+        username: "ruby_master",
+        email: "ruby_master@example.com",
+        admin: true
+    },
+    {
+        username: "ruby_beginner",
+        email: "ruby_master@example.com",
+    },
+    {
+        username: "jsMaster",
+        email: "jsMaster@example.com",
+        admin: true
+    },
+    {
+        username: "jsBeginner",
+        email: "jsBeginner@example.com"
+    }
+]
+
+    users.map do |user|
+        User.find_or_create_by(email: user[:email]) do |u|
+            u.email = user[:email]
+            u.username = user[:username]
+            puts "User: #{u[:username]}, has been created!"
+        end
+    end
+
 categories = [
     {
         name: "Ruby Programming Language"
