@@ -1,7 +1,7 @@
 class CreateOptions < ActiveRecord::Migration[6.1]
   def change
     create_table :options do |t|
-      t.boolean :is_correct
+      t.boolean :is_correct, :default => false
       t.string :content
       t.belongs_to :question, null: false, foreign_key: true
 
