@@ -15,12 +15,6 @@ ActiveRecord::Schema.define(version: 2021_09_24_174243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "options", force: :cascade do |t|
     t.boolean "is_correct", default: false
     t.string "content"
@@ -40,10 +34,8 @@ ActiveRecord::Schema.define(version: 2021_09_24_174243) do
 
   create_table "quizzes", force: :cascade do |t|
     t.string "name"
-    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_quizzes_on_category_id"
   end
 
   create_table "responses", force: :cascade do |t|
@@ -68,7 +60,6 @@ ActiveRecord::Schema.define(version: 2021_09_24_174243) do
 
   add_foreign_key "options", "questions"
   add_foreign_key "questions", "quizzes"
-  add_foreign_key "quizzes", "categories"
   add_foreign_key "responses", "options"
   add_foreign_key "responses", "questions"
   add_foreign_key "responses", "users"
