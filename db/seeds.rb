@@ -37,21 +37,21 @@ users = [
         end
     end
 
-categories = [
-    {
-        name: "Ruby Programming Language"
-    },
-    {
-        name: "Java Script Programming Language"
-    }
-]
+# categories = [
+#     {
+#         name: "Ruby Programming Language"
+#     },
+#     {
+#         name: "Java Script Programming Language"
+#     }
+# ]
 
-categories.map do |category|
-    Category.find_or_create_by(name: category[:name]) do |c|
-        c.name = category[:name]
-        puts "Category #{c.name} has been created"
-    end
-end
+# categories.map do |category|
+#     Category.find_or_create_by(name: category[:name]) do |c|
+#         c.name = category[:name]
+#         puts "Category #{c.name} has been created"
+#     end
+# end
 
 quizzes = [
     {
@@ -71,7 +71,7 @@ quizzes = [
 quizzes.map do |quiz|
     Quiz.find_or_create_by(name: quiz[:name]) do |q|
         q.name = quiz[:name]
-        q.category_id = quiz[:category_id]
+        # q.category_id = quiz[:category_id]
         puts "Quiz #{q.name} has beed created!"
     end
 end
