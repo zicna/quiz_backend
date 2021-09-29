@@ -1,5 +1,4 @@
 class QuizSerializer < ActiveModel::Serializer
-  attributes :id, :name, :category_id
-  belongs_to :category
+  attributes :id, :name, :description
   has_many :questions
 end
