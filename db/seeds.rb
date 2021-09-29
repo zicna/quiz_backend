@@ -74,7 +74,7 @@ quizzes = [
 quizzes.map do |quiz|
     Quiz.find_or_create_by(name: quiz[:name]) do |q|
         q.name = quiz[:name]
-        # q.category_id = quiz[:category_id]
+        q.description = quiz[:description]
         puts "Quiz #{q.name} has beed created!"
     end
 end

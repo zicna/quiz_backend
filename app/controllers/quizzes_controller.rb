@@ -23,7 +23,7 @@ class QuizzesController < ApplicationController
                             options:{only: [:id, :question_id, :is_correct, :content]}
                         }, only: [:id, :content, :quiz_id] 
         }},
-        only: [:id, :name]
+        only: [:id, :name, :description]
         }
     end
 end
