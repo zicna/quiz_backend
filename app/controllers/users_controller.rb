@@ -21,7 +21,7 @@ class UsersController < ApplicationController
         end
 
         if user
-            render json: user
+            render json: user.as_json(options)
         else
             render json: {notice: {error: "User not found or created"}}
         end
@@ -32,5 +32,13 @@ class UsersController < ApplicationController
     private 
     def user_params
         params.require(:user).permit(:username, :userEmail)
+    end
+
+    def options
+        {
+    include: {responses: {
+        only: [:id, :user_id, :options_id, :question_id, :content]
+    }} 
+        }
     end
 end
