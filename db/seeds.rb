@@ -338,155 +338,163 @@ takes.map do |take|
 end
 
 responses = [
-    [
+    
         {   take_id: 1,
-            options_id: 1,
+            option_id: 1,
             question_id: 7,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            options_id: 1,
+            option_id: 5,
             question_id: 1,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            options_id: 1,
+            option_id: 9,
             question_id: 2,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            options_id: 1,
+            option_id: 13,
             question_id: 3,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            options_id: 1,
+            option_id: 17,
             question_id: 4,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            options_id: 1,
+            option_id: 21,
             question_id: 5,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            options_id: 1,
+            option_id: 25,
             question_id: 6,
             content: "Lorem ipsum...."
-        }
-    ],
-    [
+        },
+    
+    
         {   take_id: 2,
-            options_id: 3,
+            option_id: 3,
             question_id: 1,
             content: "Lorem ipsum...."
         },
         {   take_id: 2,
-            options_id: 1,
+            option_id: 5,
             question_id: 2,
             content: "Lorem ipsum...."
         },
         {   take_id: 2,
-            options_id: 3,
+            option_id: 12,
             question_id: 3,
             content: "Lorem ipsum...."
         },
         {   take_id: 2,
-            options_id: 4,
+            option_id: 15,
             question_id: 4,
             content: "Lorem ipsum...."
         },
         {   take_id: 2,
-            options_id: 4,
+            option_id: 17,
             question_id: 5,
             content: "Lorem ipsum...."
         },
         {   take_id: 2,
-            options_id: 3,
+            option_id: 21,
             question_id: 6,
             content: "Lorem ipsum...."
         },
         {   take_id: 2,
-            options_id: 3,
+            option_id: 27,
+            question_id: 7,
+            content: "Lorem ipsum...."
+        },
+    
+    
+        {   take_id: 3,
+            option_id: 1,
+            question_id: 1,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            option_id: 6,
+            question_id: 2,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            option_id: 10,
+            question_id: 3,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            option_id: 14,
+            question_id: 4,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            option_id: 20,
+            question_id: 5,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            option_id: 22,
+            question_id: 6,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            option_id: 28,
+            question_id: 7,
+            content: "Lorem ipsum...."
+        },
+    
+    
+        {   take_id: 4,
+            option_id: 1,
+            question_id: 1,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            option_id: 6,
+            question_id: 2,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            option_id: 11,
+            question_id: 3,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            option_id: 15,
+            question_id: 4,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            option_id: 19,
+            question_id: 5,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            option_id: 23,
+            question_id: 6,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            option_id: 27,
             question_id: 7,
             content: "Lorem ipsum...."
         }
-    ],
-    [
-        {   take_id: 3,
-            options_id: 1,
-            question_id: 1,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 3,
-            options_id: 3,
-            question_id: 2,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 3,
-            options_id: 2,
-            question_id: 3,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 3,
-            options_id: 4,
-            question_id: 4,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 3,
-            options_id: 4,
-            question_id: 5,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 3,
-            options_id: 2,
-            question_id: 6,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 3,
-            options_id: 1,
-            question_id: 7,
-            content: "Lorem ipsum...."
-        }
-    ],
-    [
-        {   take_id: 4,
-            options_id: 1,
-            question_id: 1,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 4,
-            options_id: 3,
-            question_id: 2,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 4,
-            options_id: 2,
-            question_id: 3,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 4,
-            options_id: 4,
-            question_id: 4,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 4,
-            options_id: 3,
-            question_id: 5,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 4,
-            options_id: 2,
-            question_id: 6,
-            content: "Lorem ipsum...."
-        },
-        {   take_id: 4,
-            options_id: 1,
-            question_id: 7,
-            content: "Lorem ipsum...."
-        }
-    ]
+    
 ]
+
+responses.map do |response|
+    
+#    byebug
+    
+    Response.create(response)
+   
+end
 
 
 
