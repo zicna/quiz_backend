@@ -2,12 +2,12 @@
 
 one:
   take: one
-  options: one
+  option: one
   question: one
   content: MyString
 
 two:
   take: two
-  options: two
+  option: two
   question: two
   content: MyString

@@ -340,37 +340,37 @@ end
 responses = [
     
         {   take_id: 1,
-            option_id: 1,
+            option_id: 25,
             question_id: 7,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            option_id: 5,
+            option_id: 1,
             question_id: 1,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            option_id: 9,
+            option_id: 5,
             question_id: 2,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            option_id: 13,
+            option_id: 9,
             question_id: 3,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            option_id: 17,
+            option_id: 13,
             question_id: 4,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            option_id: 21,
+            option_id: 17,
             question_id: 5,
             content: "Lorem ipsum...."
         },
         {   take_id: 1,
-            option_id: 25,
+            option_id: 21,
             question_id: 6,
             content: "Lorem ipsum...."
         },
@@ -490,9 +490,12 @@ responses = [
 
 responses.map do |response|
     
-#    byebug
-    
-    Response.create(response)
+    # byebug
+    r = Response.new(response)
+    if r.save
+    else
+        byebug
+    end
    
 end
 
