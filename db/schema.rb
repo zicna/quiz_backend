@@ -41,12 +41,12 @@ ActiveRecord::Schema.define(version: 2021_10_01_150050) do
 
   create_table "responses", force: :cascade do |t|
     t.bigint "take_id", null: false
-    t.bigint "options_id", null: false
+    t.bigint "option_id", null: false
     t.bigint "question_id", null: false
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["options_id"], name: "index_responses_on_options_id"
+    t.index ["option_id"], name: "index_responses_on_option_id"
     t.index ["question_id"], name: "index_responses_on_question_id"
     t.index ["take_id"], name: "index_responses_on_take_id"
   end
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 2021_10_01_150050) do
 
   add_foreign_key "options", "questions"
   add_foreign_key "questions", "quizzes"
-  add_foreign_key "responses", "options", column: "options_id"
+  add_foreign_key "responses", "options"
   add_foreign_key "responses", "questions"
   add_foreign_key "responses", "takes"
   add_foreign_key "takes", "quizzes"
