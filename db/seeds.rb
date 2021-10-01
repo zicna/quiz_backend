@@ -43,7 +43,8 @@ quizzes = [
         name: "Basics of Ruby",
         category_id: 1,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    # },
+    }
+    
     # {
     #     name: "Ruby on Rails",
     #     category_id: 1,
@@ -450,38 +451,38 @@ responses = [
     ],
     [
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 1,
+            question_id: 1,
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 3,
+            question_id: 2,
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 2,
+            question_id: 3,
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 4,
+            question_id: 4,
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 3,
+            question_id: 5,
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 2,
+            question_id: 6,
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
-            options_id: ,
-            question_id: ,
+            options_id: 1,
+            question_id: 7,
             content: "Lorem ipsum...."
         }
     ]
