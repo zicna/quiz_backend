@@ -13,9 +13,8 @@ class UsersController < ApplicationController
     end
 
     def create
-
-        user = User.find_or_create_by(email: user_params[:email]) do |user|
-            user.email = user_params[:email]
+        user = User.find_or_create_by(email: user_params[:userEmail]) do |user|
+            user.email = user_params[:userEmail]
             user.username = user_params[:username]
         end
 
