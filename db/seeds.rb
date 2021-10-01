@@ -40,20 +40,20 @@ users = [
 
 quizzes = [
     {
-        name: "Starting with Ruby",
+        name: "Basics of Ruby",
         category_id: 1,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        name: "Ruby on Rails",
-        category_id: 1,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        name: "Vanila Java Script",
-        category_id: 2,
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
+    # },
+    # {
+    #     name: "Ruby on Rails",
+    #     category_id: 1,
+    #     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    # },
+    # {
+    #     name: "Vanila Java Script",
+    #     category_id: 2,
+    #     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    # }
 ]
 
 quizzes.map do |quiz|
@@ -90,16 +90,18 @@ questions = [
         quiz_id: 1
     },
     {
-        content: "console.log(1 + '1')",
-        quiz_id: 3
+        content: "What is retun value of 1 > 2 || 2 < 3",
+        quiz_id: 1
     },
     {
-        content: "What will console.log(!!undefined) log to console?",
-        quiz_id: 3
+        content: "What is return value of ternary operator(?:): 'true && !!'hello world' ? 'hello world' : true",
+        quiz_id: 1
     },
     {
-        content: "What will 'console.log('1' == 1)' log to the console",
-        quiz_id: 3
+        content: "What is the value of 'b': b = 1
+        a = 2
+        b += a",
+        quiz_id: 1
     }
 ]
 i = 0
@@ -197,67 +199,69 @@ options = [
         content: "'0', 'nil' and 'false'",
         is_correct: false
     },
-    # question 5 "console.log(1 + '1')"
+    # "What is retun value of 1 > 2 || 2 < 3"
     {
         question_id: 5,
         is_correct: true,
-        content: "11"
+        content: "true"
     },
     {
         question_id: 5,
+        content: "false",
+        is_correct: false
+    },
+    {
+        question_id: 5,
+        content: "null",
+        is_correct: false
+    },
+    {
+        question_id: 5,
+        content: "false true",
+        is_correct: false
+    },
+    # question 6 "What is return value of ternary operator(?:): 'true && !!'hello world' ? 'hello world' : true"
+    {
+        question_id: 6,
+        content: "hello world",
+        is_correct: true
+    },
+    {
+        question_id: 6,
+        content: "true",
+        is_correct: false
+    },
+    {
+        question_id: 6,
+        content: "false",
+        is_correct: false
+    },
+    {
+        question_id: 6,
+        content: "This wil return an error",
+        is_correct: false
+    },
+    # question 7 "What is the value of 'b': b = 0
+        # a = 2
+        # b += a"
+    {
+        question_id: 7,
+        content: "3",
+        is_correct: true
+    },
+    {
+        question_id: 7,
+        content: "1",
+        is_correct: false
+    },
+    {
+        question_id: 7,
         content: "2",
         is_correct: false
     },
     {
-        question_id: 5,
-        content: "This will retun an error.",
-        is_correct: false
-    },
-    {
-        question_id: 5,
-        content: "0",
-        is_correct: false
-    },
-    # question 6 "What will console.log(!!undefined) log to console?"
-    {
-        question_id: 6,
-        content: "false",
-        is_correct: true
-    },
-    {
-        question_id: 6,
-        content: "true",
-        is_correct: false
-    },
-    {
-        question_id: 6,
-        content: "undefined",
-        is_correct: false
-    },
-    {
-        question_id: 6,
-        content: "!!undefined",
-        is_correct: false
-    },
-    # question 7 "What will 'console.log('1' == 1)' log to the console"
-    {
         question_id: 7,
-        content: "true",
-        is_correct: true
-    },
-    {
-        question_id: 7,
-        content: "false",
-        is_correct: false
-    },
-    {
-        question_id: 7,
-        content: "1 (as string)",
-        is_correct: false
-    },
-    {
-        question_id: 7,
-        content: "1 (as number)",
+        content: "This wil return an error",
         is_correct: false
     }
     # # question 8
@@ -308,6 +312,180 @@ options.map do |option|
     end
 end
 puts "#{opt_num} options have been created"
+
+takes = [
+    {
+        user_id: 1,
+        quiz_id: 1
+    },
+    {
+        user_id: 2,
+        quiz_id: 1
+    },
+    {
+        user_id: 3,
+        quiz_id: 1
+    },
+    {
+        user_id: 4,
+        quiz_id: 1
+    }
+]
+
+takes.map do |take|
+    Take.create(take)
+end
+
+responses = [
+    [
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 7,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 1,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 2,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 3,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 4,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 5,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 1,
+            options_id: 1,
+            question_id: 6,
+            content: "Lorem ipsum...."
+        }
+    ],
+    [
+        {   take_id: 2,
+            options_id: 3,
+            question_id: 1,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 2,
+            options_id: 1,
+            question_id: 2,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 2,
+            options_id: 3,
+            question_id: 3,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 2,
+            options_id: 4,
+            question_id: 4,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 2,
+            options_id: 4,
+            question_id: 5,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 2,
+            options_id: 3,
+            question_id: 6,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 2,
+            options_id: 3,
+            question_id: 7,
+            content: "Lorem ipsum...."
+        }
+    ],
+    [
+        {   take_id: 3,
+            options_id: 1,
+            question_id: 1,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            options_id: 3,
+            question_id: 2,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            options_id: 2,
+            question_id: 3,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            options_id: 4,
+            question_id: 4,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            options_id: 4,
+            question_id: 5,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            options_id: 2,
+            question_id: 6,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 3,
+            options_id: 1,
+            question_id: 7,
+            content: "Lorem ipsum...."
+        }
+    ],
+    [
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 4,
+            options_id: ,
+            question_id: ,
+            content: "Lorem ipsum...."
+        }
+    ]
+]
 
 
 
