@@ -37,21 +37,6 @@ users = [
         end
     end
 
-# categories = [
-#     {
-#         name: "Ruby Programming Language"
-#     },
-#     {
-#         name: "Java Script Programming Language"
-#     }
-# ]
-
-# categories.map do |category|
-#     Category.find_or_create_by(name: category[:name]) do |c|
-#         c.name = category[:name]
-#         puts "Category #{c.name} has been created"
-#     end
-# end
 
 quizzes = [
     {

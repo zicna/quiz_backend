@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :responses
+  resources :takes
   resources :users
   resources :options
   resources :questions

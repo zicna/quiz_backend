@@ -1,5 +1,5 @@
 class Response < ApplicationRecord
-  belongs_to :user
-  belongs_to :option
+  belongs_to :take
+  belongs_to :options
   belongs_to :question
 end
