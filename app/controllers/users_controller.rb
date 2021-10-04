@@ -37,10 +37,13 @@ class UsersController < ApplicationController
             takes: {
                 include:{
                     responses:{
-                    include: {option:{
-                        only: [:question_id, :content, :explanation, :is_correct]
-                    }},
-                        except: [:created_at, :updated_at]
+                    # include: {option:{
+                    #     only: [:question_id, :content, :explanation, :is_correct]
+                    # }},
+                        except: [:created_at, :updated_at],
+                        methods: [:is_true, :url_explanation]
+                        # only: :is_true
+                        # include: [:is_true]
                     }
                 },
                 except: [:created_at, :updated_at]
