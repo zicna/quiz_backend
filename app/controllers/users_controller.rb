@@ -46,7 +46,8 @@ class UsersController < ApplicationController
                         # include: [:is_true]
                     }
                 },
-                except: [:created_at, :updated_at]
+                except: [:created_at, :updated_at],
+                methods: :total_questions
             }}, 
         except: [:created_at, :updated_at]
         }
