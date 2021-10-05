@@ -330,6 +330,10 @@ takes = [
     {
         user_id: 4,
         quiz_id: 1
+    },
+    {
+        user_id: 1,
+        quiz_id: 1
     }
 ]
 
@@ -481,6 +485,41 @@ responses = [
             content: "Lorem ipsum...."
         },
         {   take_id: 4,
+            option_id: 27,
+            question_id: 7,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
+            option_id: 1,
+            question_id: 1,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
+            option_id: 6,
+            question_id: 2,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
+            option_id: 11,
+            question_id: 3,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
+            option_id: 15,
+            question_id: 4,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
+            option_id: 19,
+            question_id: 5,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
+            option_id: 23,
+            question_id: 6,
+            content: "Lorem ipsum...."
+        },
+        {   take_id: 5,
             option_id: 27,
             question_id: 7,
             content: "Lorem ipsum...."
