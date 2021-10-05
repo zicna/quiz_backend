@@ -529,7 +529,6 @@ responses = [
 
 responses.map do |response|
     
-    # byebug
     r = Response.new(response)
     if r.save
     else
