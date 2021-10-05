@@ -1,10 +1,10 @@
 class QuizzesController < ApplicationController
     before_action :options, only: [:index, :show]
-    def index
-        quizzes =Quiz.all
+    # def index
+    #     quizzes =Quiz.all
 
-        render json: quizzes.as_json(options)
-    end
+    #     render json: quizzes.as_json(options)
+    # end
 
     def show
         quiz = Quiz.find_by(id: params[:id])

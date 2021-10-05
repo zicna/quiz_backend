@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_29_143127) do
+ActiveRecord::Schema.define(version: 2021_10_01_180123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "options", force: :cascade do |t|
-    t.boolean "is_correct", default: false
-    t.string "content"
     t.bigint "question_id", null: false
+    t.boolean "is_correct"
+    t.string "content"
+    t.string "explanation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_options_on_question_id"
@@ -40,15 +41,24 @@ ActiveRecord::Schema.define(version: 2021_09_29_143127) do
   end
 
   create_table "responses", force: :cascade do |t|
-    t.string "content"
-    t.bigint "user_id", null: false
-    t.bigint "option_id", null: false
+    t.bigint "take_id", null: false
     t.bigint "question_id", null: false
+    t.bigint "option_id", null: false
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["option_id"], name: "index_responses_on_option_id"
     t.index ["question_id"], name: "index_responses_on_question_id"
-    t.index ["user_id"], name: "index_responses_on_user_id"
+    t.index ["take_id"], name: "index_responses_on_take_id"
+  end
+
+  create_table "takes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "quiz_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["quiz_id"], name: "index_takes_on_quiz_id"
+    t.index ["user_id"], name: "index_takes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,5 +73,7 @@ ActiveRecord::Schema.define(version: 2021_09_29_143127) do
   add_foreign_key "questions", "quizzes"
   add_foreign_key "responses", "options"
   add_foreign_key "responses", "questions"
-  add_foreign_key "responses", "users"
+  add_foreign_key "responses", "takes"
+  add_foreign_key "takes", "quizzes"
+  add_foreign_key "takes", "users"
 end

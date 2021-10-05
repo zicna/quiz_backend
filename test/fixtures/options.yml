@@ -1,11 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  question: one
   is_correct: false
   content: MyString
-  question: one
+  explanation: MyString
 
 two:
+  question: two
   is_correct: false
   content: MyString
-  question: two
+  explanation: MyString
