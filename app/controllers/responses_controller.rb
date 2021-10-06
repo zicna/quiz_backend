@@ -5,12 +5,16 @@ class ResponsesController < ApplicationController
             resp = Response.create(r)
         end
         #!option one
+        # take_id =params[:_json].first[:take_id]
+        # take = Take.find_by(id: take_id)
+        # user = User.find_by(id: take.user.id)
+        # render json: user
+
+        # !option two redirect to user
         take_id =params[:_json].first[:take_id]
         take = Take.find_by(id: take_id)
-        user = User.find_by(id: take.user.id)
-        render json: user
-
-        # !option two
+        user_id = take.user.id
+        redirect_to "http://localhost:3000/users/#{user_id}"
         
         # responses = []
         # response_params.each do |r|

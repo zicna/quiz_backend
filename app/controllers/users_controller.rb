@@ -6,7 +6,8 @@ class UsersController < ApplicationController
     end
 
     def show
-        user = User.find_by(email: params[:id])
+        # byebug
+        user = User.find_by(id: params[:id])
         if user
             render json: user.as_json(options)
         end
