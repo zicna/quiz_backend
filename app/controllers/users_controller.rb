@@ -39,14 +39,14 @@ class UsersController < ApplicationController
     def options
         {include: {
             takes: {
-                include:{
-                    responses:{
-                        except: [:created_at, :updated_at],
-                        methods: [:is_true, :url_explanation]
-                    }
-                },
+                # include:{
+                #     responses:{
+                #         except: [:created_at, :updated_at],
+                #         methods: [:is_true, :url_explanation]
+                #     }
+                # },
                 except: [:created_at, :updated_at],
-                methods: :total_questions
+                methods: [:total_questions, :num_correct_answers]
             }}, 
         except: [:created_at, :updated_at]
         }
