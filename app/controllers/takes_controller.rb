@@ -1,6 +1,6 @@
 class TakesController < ApplicationController
+    
     def create
-
         take = Take.new(take_params)
 
         if take.save
