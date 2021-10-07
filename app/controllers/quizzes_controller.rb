@@ -1,5 +1,5 @@
 class QuizzesController < ApplicationController
-    before_action :options, only: [:index, :show]
+    before_action :options, only: :show
 
     def show
         quiz = Quiz.find_by(id: params[:id])
