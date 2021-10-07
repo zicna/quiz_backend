@@ -15,8 +15,8 @@ class ResponsesController < ApplicationController
         # *all responses that we are sending through params belongs_to same take, therefore they have the same user
         take_id =params[:_json].first[:take_id]
         take = Take.find_by(id: take_id)
-        user_id = take.user.id
-        redirect_to "http://localhost:3000/users/#{user_id}"
+        user = User.find_by(id: take.user.id)
+        redirect_to user_path
         
     end
 

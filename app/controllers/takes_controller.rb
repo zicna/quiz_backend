@@ -10,6 +10,14 @@ class TakesController < ApplicationController
         end
     end
 
+    def destroy
+        
+        take = Take.find_by(id: params[:id])
+        user = User.find_by(id: take.user.id)
+        take.destroy
+        render json: {message:{notice: "#{user.username}'s take has beed deleted."}}
+    end
+
     private
     def take_params
         params.require(:take).permit(:user_id, :quiz_id)
