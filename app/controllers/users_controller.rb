@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
     def index
+        # !this one is not in use yet
         users = User.all
 
         render json: users.as_json(options)
     end
 
     def show
-        # byebug
+        # *we are comming here through responses controller
         user = User.find_by(id: params[:id])
         if user
             render json: user.as_json(options)
@@ -14,6 +15,7 @@ class UsersController < ApplicationController
     end
 
     def create
+        # *this is main action for our user to create or retrive new profil
         user = User.find_or_create_by(email: user_params[:userEmail]) do |user|
             user.email = user_params[:userEmail]
             user.username = user_params[:username]
@@ -32,19 +34,15 @@ class UsersController < ApplicationController
     def user_params
         params.require(:user).permit(:username, :userEmail)
     end
-
+# *we are not including options in our responses, rather we are using custom model methods that will check if given option for response it 'true' or 'false'
+#*this custom methods will make it easier for us in front end
     def options
         {include: {
             takes: {
                 include:{
                     responses:{
-                    # include: {option:{
-                    #     only: [:question_id, :content, :explanation, :is_correct]
-                    # }},
                         except: [:created_at, :updated_at],
                         methods: [:is_true, :url_explanation]
-                        # only: :is_true
-                        # include: [:is_true]
                     }
                 },
                 except: [:created_at, :updated_at],
