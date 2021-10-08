@@ -24,7 +24,7 @@ class UsersController < ApplicationController
         if user
             render json: user.as_json(options)
         else
-            render json: {notice: {error: "User not found or created"}}
+            render json: {message: {error: "User not found or created"}}
         end
 
 

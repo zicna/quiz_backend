@@ -11,7 +11,6 @@ class TakesController < ApplicationController
     end
 
     def destroy
-        
         take = Take.find_by(id: params[:id])
         user = User.find_by(id: take.user.id)
         take.destroy
