@@ -1,9 +1,10 @@
 class User < ApplicationRecord
-    # has_many :responses
+    has_secure_password
+
     has_many :takes
     has_many :quizzes, through: :takes
-    # user model validations
-    validates :username, presence: true
+
+    validates :username, uniqueness: {case_sensitive: false}
     validates :email, presence: true
     validates :email, uniqueness: true
 end
