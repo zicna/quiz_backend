@@ -8,6 +8,7 @@ class Api::V1::UsersController < ApplicationController
         else
             render json: { error: 'failed to create user' }, status: :unprocessable_entity
         end
+    end
         
         private
 
