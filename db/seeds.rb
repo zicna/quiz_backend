@@ -532,7 +532,7 @@ responses.map do |response|
     r = Response.new(response)
     if r.save
     else
-        byebug
+        # byebug
     end
    
 end
