@@ -52,7 +52,8 @@ Database used for this application is postgreSQL.
 <summary>See database schema</summary>
 
 ![Database Schema](./Quiz_app%20final%20db%20setup.jpeg)
-_<p align="center"> Database schema </p>_
+*<p align="center"> Database schema </p>*
+</details>
 
 </details>
 ___
